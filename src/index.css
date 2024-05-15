@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  body{
+    @apply min-h-screen bg-black grid font-mono tracking-wider;
+  }
+
+}
+
+
+
+.blinking {
+  color:red;
+  animation: blink 1s infinite reverse;
+  -webkit-animation: blink 1s infinite reverse;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
