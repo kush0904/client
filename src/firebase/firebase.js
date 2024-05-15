@@ -4,7 +4,8 @@ import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBfQbW9Oerz36Ce0orbdgUdn9hIqa9SdSY",
-  authDomain: "typista-1e651.firebaseapp.com",
+  // authDomain: "typista-1e651.firebaseapp.com",
+  authDomain: "typistaa.netlify.app",
   projectId: "typista-1e651",
   storageBucket: "typista-1e651.appspot.com",
   messagingSenderId: "986317410419",
