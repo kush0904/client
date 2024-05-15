@@ -8,6 +8,7 @@ import { ModeContext } from "../components/ModeContext";
 import axios from "axios";
 
 const NUMBER_OF_WORDS = 10;
+const baseURL = "https://server-kj64.onrender.com";
 
 
 const useEngine = () => {
@@ -58,7 +59,7 @@ const sendResultsToServer = async (resultsData) => {
 
   console.log(resultsData);
   try {
-    const response = await axios.post('http://localhost:5000/results/', resultsData);
+    const response = await axios.post(`${baseURL}/results/`, resultsData);
     console.log('Results sent to server successfully');
   } catch (error) {
     console.error('Error sending results to server:', error.message);

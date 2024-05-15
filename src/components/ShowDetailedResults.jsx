@@ -7,17 +7,20 @@ import { Drawer } from './Drawer';
 import { FaHome } from "react-icons/fa";
 
 
+const baseURL = "https://server-kj64.onrender.com";
+
+
+
 export default function ShowDetailedResults() {
     const [data, setData] = useState([]);
     const { userId } = useParams();
     const [showLoader, setShowLoader] = useState(true);
 
-   
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/results/${userId}`);
+                const response = await axios.get(`${baseURL}/results/${userId}`);
                 console.log(response.data);
 
                 const modifiedData = response.data.data.map(item => ({
